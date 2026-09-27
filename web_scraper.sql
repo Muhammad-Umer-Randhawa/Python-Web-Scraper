@@ -5,3 +5,4 @@ CREATE TABLE IF NOT EXISTS `quotes`(
     quote_text TEXT NOT NULL,
     author VARCHAR(255) NOT NULL
 );
+ALTER TABLE `quotes` ADD CONSTRAINT unique_quote UNIQUE (quote_text(255), author);

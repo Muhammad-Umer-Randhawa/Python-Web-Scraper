@@ -5,7 +5,7 @@ def save_quotes(quotes):
 
     for q in quotes:
         cursor.execute(
-            "INSERT INTO quotes (quote_text, author) VALUES (%s, %s)", 
+            "INSERT IGNORE INTO quotes (quote_text, author) VALUES (%s, %s)", 
             (q["text"], q["author"])
         )
     conn.commit()
